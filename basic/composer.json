@@ -3,5 +3,7 @@
     "description": "Basic Example of Griffin Migrations",
     "type": "project",
     "license": "MIT",
-    "require": {}
+    "require": {
+        "griffin/griffin": "^1.0"
+    }
 }
