@@ -1,0 +1,7 @@
+{
+    "name": "griffin/griffin-examples-basic",
+    "description": "Basic Example of Griffin Migrations",
+    "type": "project",
+    "license": "MIT",
+    "require": {}
+}
