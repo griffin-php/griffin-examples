@@ -8,7 +8,7 @@ use League\Event\EventDispatcher;
 
 $runner->setEventDispatcher(new EventDispatcher());
 
-$logger = fn($event) => printf("%s\n", $event->getMigration()::class);
+$logger = fn($event) => printf("%s\n", $event->getMigration()->getName());
 
 $runner->getEventDispatcher()
     ->subscribeTo(MigrationEvent\UpAfter::class, $logger);
