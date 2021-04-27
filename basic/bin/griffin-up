@@ -17,9 +17,10 @@ $runner    = new Runner($planner);
 $runner->setEventDispatcher(new EventDispatcher());
 
 $runner->getPlanner()->getContainer()
-    // Sort Alphabetically
+    // Sort Alphabetically (or Any Order)
     ->addMigration(new Basic\Items())
     ->addMigration(new Basic\Orders())
+    ->addMigration(new Basic\Payments())
     ->addMigration(new Basic\Products());
 
 $logger = fn($event) => printf("%s::%s\n", $event::class, $event->getMigration()::class);
