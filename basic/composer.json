@@ -10,5 +10,10 @@
     "psr-4": {
       "Griffin\\Examples\\Basic\\": "src"
     }
+  },
+  "scripts": {
+    "migrate": [
+      "./bin/griffin-up"
+    ]
   }
 }
