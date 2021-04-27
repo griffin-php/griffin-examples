@@ -4,7 +4,8 @@
   "type": "project",
   "license": "MIT",
   "require": {
-    "griffin/griffin": "^1.0"
+    "griffin/griffin": "^1.0",
+    "league/event": "^3.0"
   },
   "autoload": {
     "psr-4": {
