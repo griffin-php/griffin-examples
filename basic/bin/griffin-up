@@ -1,32 +1,12 @@
 #!/usr/bin/env php
 <?php
 
-require __DIR__ . '/../vendor/autoload.php';
+$runner = require __DIR__ . '/../index.php';
 
 use Griffin\Event\Migration as MigrationEvent;
-use Griffin\Examples\Basic;
-use Griffin\Migration\Container;
-use Griffin\Planner\Planner;
-use Griffin\Runner\Runner;
 use League\Event\EventDispatcher;
 
-$container = new Container();
-$planner   = new Planner($container);
-$runner    = new Runner($planner);
-
 $runner->setEventDispatcher(new EventDispatcher());
-
-$runner->getPlanner()->getContainer()
-    // Sort Alphabetically (or Any Order)
-    ->addMigration(new Basic\Categories())
-    ->addMigration(new Basic\Items())
-    ->addMigration(new Basic\Movements())
-    ->addMigration(new Basic\Orders())
-    ->addMigration(new Basic\Payments())
-    ->addMigration(new Basic\Products())
-    ->addMigration(new Basic\Stocks())
-    ->addMigration(new Basic\Users())
-    ->addMigration(new Basic\Wishes());
 
 $logger = fn($event) => printf("%s\n", $event->getMigration()::class);
 
