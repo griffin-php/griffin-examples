@@ -24,10 +24,7 @@ $runner->getPlanner()->getContainer()
     ->addMigration(new Basic\Products())
     ->addMigration(new Basic\Users());
 
-$logger = fn($event) => printf("%s::%s\n", $event::class, $event->getMigration()::class);
-
-$runner->getEventDispatcher()
-    ->subscribeTo(MigrationEvent\UpBefore::class, $logger);
+$logger = fn($event) => printf("%s\n", $event->getMigration()::class);
 
 $runner->getEventDispatcher()
     ->subscribeTo(MigrationEvent\UpAfter::class, $logger);
