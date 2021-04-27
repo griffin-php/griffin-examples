@@ -3,15 +3,28 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
+use Griffin\Event\Migration as MigrationEvent;
 use Griffin\Examples\Basic;
 use Griffin\Migration\Container;
 use Griffin\Planner\Planner;
 use Griffin\Runner\Runner;
+use League\Event\EventDispatcher;
 
-$container = (new Container())
+$container = new Container();
+$planner   = new Planner($container);
+$runner    = new Runner($planner);
+
+$runner->setEventDispatcher(new EventDispatcher());
+
+$runner->getPlanner()->getContainer()
     ->addMigration(new Basic\Orders());
 
-$planner = new Planner($container);
-$runner  = new Runner($planner);
+$logger = fn($event) => printf("%s::%s\n", $event::class, $event->getMigration()::class);
+
+$runner->getEventDispatcher()
+    ->subscribeTo(MigrationEvent\UpBefore::class, $logger);
+
+$runner->getEventDispatcher()
+    ->subscribeTo(MigrationEvent\UpAfter::class, $logger);
 
 $runner->up(); // Migrate Up Everything
