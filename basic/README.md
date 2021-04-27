@@ -9,9 +9,9 @@ Basic Example of Griffin Migrations
             ↑
  Payments → Orders
             ↑
-            Items ← Movements → Stocks
+            Items ← Movements  → Stocks
                     ↓
-                    Products
+                    Products   ← Wishes → Users
                     ↓
                     Categories
 ```
@@ -27,11 +27,12 @@ docker-compose run --rm php composer migrate
 
 ```
 Griffin\Examples\Basic\Categories
+Griffin\Examples\Basic\Products
+Griffin\Examples\Basic\Stocks
+Griffin\Examples\Basic\Movements
 Griffin\Examples\Basic\Users
 Griffin\Examples\Basic\Orders
-Griffin\Examples\Basic\Stocks
-Griffin\Examples\Basic\Products
-Griffin\Examples\Basic\Movements
 Griffin\Examples\Basic\Items
 Griffin\Examples\Basic\Payments
+Griffin\Examples\Basic\Wishes
 ```

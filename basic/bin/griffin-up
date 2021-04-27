@@ -25,7 +25,8 @@ $runner->getPlanner()->getContainer()
     ->addMigration(new Basic\Payments())
     ->addMigration(new Basic\Products())
     ->addMigration(new Basic\Stocks())
-    ->addMigration(new Basic\Users());
+    ->addMigration(new Basic\Users())
+    ->addMigration(new Basic\Wishes());
 
 $logger = fn($event) => printf("%s\n", $event->getMigration()::class);
 

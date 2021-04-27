@@ -16,8 +16,8 @@ class Items implements MigrationInterface
     public function getDependencies(): array
     {
         return [
-            Orders::class,
             Movements::class,
+            Orders::class,
         ];
     }
 }

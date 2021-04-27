@@ -6,7 +6,7 @@ namespace Griffin\Examples\Basic;
 
 use Griffin\Migration\MigrationInterface;
 
-class Movements implements MigrationInterface
+class Wishes implements MigrationInterface
 {
     use MigrationTrait;
 
@@ -17,7 +17,7 @@ class Movements implements MigrationInterface
     {
         return [
             Products::class,
-            Stocks::class,
+            Users::class,
         ];
     }
 }
