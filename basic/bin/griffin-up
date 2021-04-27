@@ -4,5 +4,14 @@
 require __DIR__ . '/../vendor/autoload.php';
 
 use Griffin\Examples\Basic;
+use Griffin\Migration\Container;
+use Griffin\Planner\Planner;
+use Griffin\Runner\Runner;
 
-$orders = new Basic\Orders();
+$container = (new Container())
+    ->addMigration(new Basic\Orders());
+
+$planner = new Planner($container);
+$runner  = new Runner($planner);
+
+$runner->up(); // Migrate Up Everything
