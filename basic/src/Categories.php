@@ -6,7 +6,7 @@ namespace Griffin\Examples\Basic;
 
 use Griffin\Migration\MigrationInterface;
 
-class Items implements MigrationInterface
+class Categories implements MigrationInterface
 {
     use MigrationTrait;
 
@@ -15,9 +15,6 @@ class Items implements MigrationInterface
      */
     public function getDependencies(): array
     {
-        return [
-            Orders::class,
-            Movements::class,
-        ];
+        return [];
     }
 }

@@ -15,6 +15,8 @@ class Products implements MigrationInterface
      */
     public function getDependencies(): array
     {
-        return [];
+        return [
+            Categories::class,
+        ];
     }
 }
