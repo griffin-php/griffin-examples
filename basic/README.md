@@ -10,8 +10,8 @@ Basic Example of Griffin Migrations
  Payments → Orders                       |
             ↑                            |
             Items ← Movements  → Stocks  |
-                    ↓                    |
-                    Products   ← Wishes -┘
+            |                            |
+            └-----→ Products   ← Likes --┘
                     ↓
                     Categories
 ```
@@ -28,22 +28,22 @@ docker-compose run --rm php composer rollback
 
 ```
 Griffin\Examples\Basic\Categories
-Griffin\Examples\Basic\Products
-Griffin\Examples\Basic\Stocks
-Griffin\Examples\Basic\Movements
 Griffin\Examples\Basic\Users
 Griffin\Examples\Basic\Orders
+Griffin\Examples\Basic\Products
 Griffin\Examples\Basic\Items
+Griffin\Examples\Basic\Likes
+Griffin\Examples\Basic\Stocks
+Griffin\Examples\Basic\Movements
 Griffin\Examples\Basic\Payments
-Griffin\Examples\Basic\Wishes
 ```
 
 ## Rollback
 
 ```
-Griffin\Examples\Basic\Items
 Griffin\Examples\Basic\Movements
-Griffin\Examples\Basic\Wishes
+Griffin\Examples\Basic\Items
+Griffin\Examples\Basic\Likes
 Griffin\Examples\Basic\Products
 Griffin\Examples\Basic\Categories
 Griffin\Examples\Basic\Payments

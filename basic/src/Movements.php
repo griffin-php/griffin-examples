@@ -16,7 +16,7 @@ class Movements implements MigrationInterface
     public function getDependencies(): array
     {
         return [
-            Products::class,
+            Items::class,
             Stocks::class,
         ];
     }
