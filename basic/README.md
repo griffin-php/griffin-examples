@@ -21,9 +21,10 @@ Basic Example of Griffin Migrations
 ```
 docker-compose run --rm php composer install
 docker-compose run --rm php composer migrate
+docker-compose run --rm php composer rollback
 ```
 
-## Planning
+## Migrate
 
 ```
 Griffin\Examples\Basic\Categories
@@ -35,4 +36,18 @@ Griffin\Examples\Basic\Orders
 Griffin\Examples\Basic\Items
 Griffin\Examples\Basic\Payments
 Griffin\Examples\Basic\Wishes
+```
+
+## Rollback
+
+```
+Griffin\Examples\Basic\Items
+Griffin\Examples\Basic\Movements
+Griffin\Examples\Basic\Wishes
+Griffin\Examples\Basic\Products
+Griffin\Examples\Basic\Categories
+Griffin\Examples\Basic\Payments
+Griffin\Examples\Basic\Orders
+Griffin\Examples\Basic\Stocks
+Griffin\Examples\Basic\Users
 ```
