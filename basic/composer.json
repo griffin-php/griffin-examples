@@ -15,6 +15,9 @@
   "scripts": {
     "migrate": [
       "./bin/griffin-up"
+    ],
+    "rollback": [
+      "./bin/griffin-down"
     ]
   }
 }

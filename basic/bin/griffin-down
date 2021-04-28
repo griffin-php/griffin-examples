@@ -1,0 +1,18 @@
+#!/usr/bin/env php
+<?php
+
+$runner = require __DIR__ . '/../index.php';
+
+use Griffin\Event\Migration as MigrationEvent;
+use League\Event\EventDispatcher;
+
+$runner->up(); // Migrate Up Everything (to Down After)
+
+$runner->setEventDispatcher(new EventDispatcher());
+
+$logger = fn($event) => printf("%s\n", $event->getMigration()->getName());
+
+$runner->getEventDispatcher()
+    ->subscribeTo(MigrationEvent\DownAfter::class, $logger);
+
+$runner->down(); // Migrate Down Everything

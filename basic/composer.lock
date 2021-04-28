@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "griffin/griffin",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/griffin-php/griffin.git",
-                "reference": "ebe949ea6e3c6cdfa6efa176dd51d4cd48d0ab16"
+                "reference": "c9596c85a39e03effa9bf0e785f43e9c445a823b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/griffin-php/griffin/zipball/ebe949ea6e3c6cdfa6efa176dd51d4cd48d0ab16",
-                "reference": "ebe949ea6e3c6cdfa6efa176dd51d4cd48d0ab16",
+                "url": "https://api.github.com/repos/griffin-php/griffin/zipball/c9596c85a39e03effa9bf0e785f43e9c445a823b",
+                "reference": "c9596c85a39e03effa9bf0e785f43e9c445a823b",
                 "shasum": ""
             },
             "require": {
@@ -62,9 +62,9 @@
             ],
             "support": {
                 "issues": "https://github.com/griffin-php/griffin/issues",
-                "source": "https://github.com/griffin-php/griffin/tree/1.0.1"
+                "source": "https://github.com/griffin-php/griffin/tree/1.0.2"
             },
-            "time": "2021-04-24T20:45:19+00:00"
+            "time": "2021-04-28T11:43:17+00:00"
         },
         {
             "name": "league/event",
