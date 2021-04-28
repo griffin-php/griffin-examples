@@ -6,7 +6,7 @@ namespace Griffin\Examples\Basic;
 
 use Griffin\Migration\MigrationInterface;
 
-class Wishes implements MigrationInterface
+class Likes implements MigrationInterface
 {
     use MigrationTrait;
 

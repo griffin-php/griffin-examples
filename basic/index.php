@@ -15,12 +15,12 @@ $runner->getPlanner()->getContainer()
     // Sort Alphabetically (or Any Order)
     ->addMigration(new Basic\Categories())
     ->addMigration(new Basic\Items())
+    ->addMigration(new Basic\Likes())
     ->addMigration(new Basic\Movements())
     ->addMigration(new Basic\Orders())
     ->addMigration(new Basic\Payments())
     ->addMigration(new Basic\Products())
     ->addMigration(new Basic\Stocks())
-    ->addMigration(new Basic\Users())
-    ->addMigration(new Basic\Wishes());
+    ->addMigration(new Basic\Users());
 
 return $runner;
