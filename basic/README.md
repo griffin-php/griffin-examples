@@ -5,13 +5,13 @@ Basic Example of Griffin Migrations
 ## Graph
 
 ```
-            Users ← ---------------------┐
-            ↑                            |
- Payments → Orders                       |
-            ↑                            |
-            Items ← Movements  → Stocks  |
-            |                            |
-            └-----→ Products   ← Likes --┘
+            Users ←──────────────────────┐
+            ↑                            │
+ Payments → Orders                       │
+            ↑                            │
+            Items ← Movements  → Stocks  │
+            │                            │
+            └─────→ Products   ← Likes ──┘
                     ↓
                     Categories
 ```
